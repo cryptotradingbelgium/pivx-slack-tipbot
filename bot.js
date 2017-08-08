@@ -14,7 +14,7 @@ let argv = parseArgs(process.argv.slice(2));
 const SLACK_TOKEN = argv['slack-token'] || process.env.TIPBOT_SLACK_TOKEN;
 const RPC_USER = argv['rpc-user'] || process.env.TIPBOT_RPC_USER;
 const RPC_PASSWORD = argv['rpc-password'] || process.env.TIPBOT_RPC_PASSWORD;
-const RPC_PORT = argv['rpc-port'] || process.env.TIPBOT_RPC_PORT || 51470;
+const RPC_PORT = argv['rpc-port'] || process.env.TIPBOT_RPC_PORT || 51475;
 const WALLET_PASSW = argv['wallet-password'] || process.env.TIPBOT_WALLET_PASSWORD;
 
 const debugMode = process.env.NODE_ENV === 'development' ? true : false;
@@ -32,12 +32,12 @@ const TIPBOT_OPTIONS = {
 };
 
 let OPTIONS = {
-    PRICE_CHANNEL_NAME: debugMode ? 'test_channel' : 'price_speculation',
-    WARN_MODS_USER_LEFT_CHANNELNAME: debugMode ? 'test_channel' : 'moderators',
-    WARN_NEW_USER_CHANNELNAME: debugMode ? 'test_channel' : 'pivx_chat',
-    MAIN_CHANNEL_NAME: debugMode ? 'test_channel' : 'pivx_chat',
+    PRICE_CHANNEL_NAME: debugMode ? 'test_channel' : 'trading',
+    WARN_MODS_USER_LEFT_CHANNELNAME: debugMode ? 'test_channel' : 'management',
+    WARN_NEW_USER_CHANNELNAME: debugMode ? 'test_channel' : 'general',
+    MAIN_CHANNEL_NAME: debugMode ? 'test_channel' : 'general',
 
-    SHOW_RANDOM_HELP_TIMER: 720, // show a random help command every X minutes (6/12 hours = 360/720 minutes)
+    SHOW_RANDOM_HELP_TIMER: 360, // show a random help command every X minutes (6/12 hours = 360/720 minutes)
 
     DB: 'mongodb://localhost/tipdb-dev' //tipbotdb
 };

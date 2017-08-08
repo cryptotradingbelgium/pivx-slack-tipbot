@@ -33,3 +33,5 @@ test.sh
 launch.json
 
 .foreverignore
+
+/tmp/rates/*

@@ -7,7 +7,7 @@
     "async": "^2.0.0",
     "bitcoin": "^3.0.1",
     "bitcoinjs-lib": "~1.4.3",
-    "botkit": "^0.5.1",
+    "botkit": "^0.5.5",
     "debug": "^2.2.0",
     "lodash": "^3.1.0",
     "minimist": "^1.1.0",

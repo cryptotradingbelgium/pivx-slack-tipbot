@@ -4,98 +4,50 @@ const tipbotTxt = {
 // HELPTEXT
     'helpText': [
 //'title':
-        '*PivxBot commands* \n',
+        '* CryptoBeleggers` tippy : Een overzicht van mogelijke functies* \n',
 
 //'help_balance':
-        '*balance*\t\task the bot for your current balance\n' +
-'\t\t_@PivxBot what is my balance_',
+        '*balance*\t\tVraag de huidige balans van je PivX portefeuille.\n' +
+'> vb:\t\t\t`@tippy wat is mijn balance`',
 
 //'help_send':
-        '*send*\t\t\t\ttell the bot to send coins to someone; \n' +
-'\t\t_@PivxBot send 0.1 PIV to @someone_ \n' +
-'\t\t_aliases: give, tip_ \n' +
-'\t\t\t\tWorks also with major fiat currencies (use *currencies* command to see the list); \n' +
-'\t\t_@PivxBot give 4 USD to @someone_',
+        '*send*\t\t\tVerstuur een aantal munten naar een gebruiker die het verdient heeft! (_Aliassen:_ `give` en `tip`)\n' +
+'> vb:\t\t\t`@tippy send 0.1 PIV naar @someone` \n',
 
 // 'help_deposit':
-        '*deposit*\t\task the bot for a deposit address; _@PivxBot let me deposit!_',
+        '*deposit*\t\tVraag het huidige adress van je portefeuille\n> vb:\t\t\t `@tippy waarheen stuur ik mijn deposit?`',
 
 // 'help_withdraw':
-        '*withdraw*\ttell the bot to withdraw an amount to an address. \n' +
-'\t\t\t\t\tYou can also use _all_ to withdraw your complete balance (minus the tx fee) \n' +
-'\t\t_@PivxBot withdraw 1 PIV to D8Sf2wpaMyarjCbnwqskXaGAS6jwKSBA1B',
-
-// 'help_currencies':
-        '*currencies*\task the bot for a list of supported currencies.\n' +
-'\t\t_@PivxBot what currencies do you know?_ ',
+        '*withdraw*\t\tStuur (een deel van)  je fondsen naar een andere (jouw eigen) portefuille.\n' +
+'> vb:\t\t\t`@tippy withdraw 1 PIV naar D8Sf2wpaMyarjCbnwqskXaGAS6jwKSBA1B`',
 
 // 'help_price':
-        '*price*\t\t\task the bot for the PIVX price in a particular currency. Price info from coinmarketcap.\n ' +
-'\t\t_@PivxBot price in USD!_ ',
-
-// 'help_pricelist':
-        '*priceticker*\t\tshows all the known prices. Use * priceticker short* for a limited list.',
-
-// 'help_convert':
-        '*convert*\t\task the bot to convert between a particular currency and Pivx (or visa versa).\n' +
-'\t\t_@DashBot 0.03 PIVX to GBP_ \t or \t _@PivxBot 15 EURO to PIVX_\n',
-
-// 'help_rain':
-// '*rain*\t\tcheck the available rain and threshold. \n ' +
-// '\t\tAdmins can also release the rain with the *rain now* command.\n',
-
-// 'help_sun':
-        '*sun*\t\t\tcheck the available sunshine. \n' +
-'\t\t\tEach user that has tipped another user will receive a _sunray_ (read: free PIVX) from the sun fund.',
-
-// 'help_quiz'
-        '*quiz add*\t\tThe bot will ask to input a new quiz question and answer.\nEach question needs to be reviewed by a moderator.\n',
-// + '\n\t\tUse _quiz list_ and _quiz review_ to get the question number for the next commands.\n' +
-        '*quiz answer*\t\tPost an answer to a quiz question.\n'
+        '*price*\t\t\t\tWat zou de huidige prijs van PIVX zijn? (Info via Coinmarketcap)\n' +
+'> vb:\t\t\t`@tippy wat is de huidige price in USD?`'
     ],
-
     'helpAdminOnly':
-'===== *ADMIN ONLY COMMANDS* =====\n' +
-'*emergency restart*\tRestart the Slack connection of tipbot. \n' +
-'\t\t\t\t*Only use in real emergency*\n\n' +
-'*balance all*\tshow all the tip jars (must be enabled in code)\n' +
-'\n' +
-'*balance check*\tshow the balance of a specific user (must be enabled in code) \n' +
-'\t\t_@pivxbot balance check @naruby_ \n' +
-'\n\n' +
-'*whisper*\tSend a message in a private channel to a user as pivxbot.\n' +
-'\t\t\t\t\tUse case :moderator warning.\n' +
-'\t\t_@Pivxbot whisper @narbuy stop being silly man._\n' +
-'\n\n' +
-'*sun threshold*\t set the threshold on where the balance of the sun account will be distributed\n' +
-'\t\t\t\tbetween all the users that tipped. Defaults to 5 PIV.\n' +
-'\t\t_@pivxbot sun threshold 2.5 pivx_\n' +
-'\n' +
-'*sun eligible*\tSee which users are eligible for a sunray.\n' +
-'\n' +
-'*sun reset*\t\tReset all tip counts, not needed normally as tip counters are reset when sun is shining.' +
-'\n' +
-'*quiz list*\t\tShow all approved questions.\n' +
-'*quiz review*\tList all questions that need to be reviewed (reward = 0).\n' +
-'*quiz delete _question number_*\tDelete a question.\n' +
-'*quiz reward _question number_*\tSet/change reward for a question (also approves the question). @pivxbot will ask amount.\n' +
-'*quiz start*\t\tStart a quiz.\n' +
-'*quiz abort*\t\tStop a quiz without showing results.\n'+
-'*quiz next*\t\tSkip the current question (if no one finds the answer).\n',
+'===== *ENKEL VOOR ADMINS* =====\n' +
+'*emergency restart*\tHerstarten van de Slack connectie van de bot. *Gebruik enkel in noodgevallen*\n'+
+'*balance all*\tToon de balans van alle portefeuilles\n' +
+'*balance check <username>*\tToons te balans van een specifieke gebruiker.\n' +
+'> vb:\t\t`@tippy balance check @amnesiacu` \n' +
+'*whisper*\tVerstuur een privat bericht naar een gebruiker als tippy.\n' +
+'> vb:\t\t`@tippy whisper @amnesiacu Braaf zijn eh!`\n' +
+'\n' 
+,
 
-    'tx_fee': 'The transaction fee is set to ',
-    'HelpRandom1': 'Here is an example of one of my commands, type "@pivxbot help" for my full list. ',
-// 'HelpRandom2': 'You can get information about all my other cool tricks via the *help* command. \n Have a nice day !',
+    'tx_fee': 'De transactie kost (Tx Fee) staat op ',
+    'HelpRandom1': 'Ziehier een voorbeeld van een van mijn commandos. Type "@tippy help" om de volledige lijst te zien.',
 // NEW USER
-    'WarningNewUser1': 'The new user ',
-    'WarningNewUser2': ' has joined ! Go and greet them, plz.',
+    'WarningNewUser1': 'Hey, ',
+    'WarningNewUser2': '. Welkom bij  CryptoBeleggers. Kijk gerust rond, er zijn kanalen voor iedere gelegenheid. Gelieve ook een avatar te kiezen.\nUit veiligheidsoverwegingen raden we gebruikers aan niet hun (volledige) echte naam in hun Slack profiel te zetten.\nVoor hulp m.b.t mijn mogelijke commandos type `@tippy help`!',
 // USER LEFT
-    'WarnUserLeft1': 'The user ',
-    'WarnUserLeft2': ' has left the slack team. Think about his/her tip jar.',
+    'WarnUserLeft1': 'Gebruiker ',
+    'WarnUserLeft2': ' heeft het slack team verlaten. Denk aan zijn/haar portefeuille.',
 // ALL BALANCES
-    'RetrievingAllBalancesDisabled': 'Retrieving all balances is disabled!',
-    'RetrievingAllBalancesAdminOnly': 'Only admins can list all balances!',
-    'RetrievingAllBalancesWait': 'Retrieving all balances... might take a while depending on the amount of users!',
+    'RetrievingAllBalancesDisabled': 'Ophalen van alle balansen is uitgeschakeld.',
+    'RetrievingAllBalancesAdminOnly': 'Alleen admins kunnen alle balansen zien.',
+    'RetrievingAllBalancesWait': 'Ophalen van alle portefeuilles... Dit kan even duren - afh van aantal gebruikers!',
 // CHECK BALANCE
     'CheckBalanceDisabled': 'Checking balance of an other user is disabled!',
     'CheckBalanceAdminOnly': 'Only admins can check other balances!',
