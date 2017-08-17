@@ -1,4 +1,4 @@
-#PIVX TipBot For Slack -- CTB SLACKBOT
+#PIVX TipBot For Slack -- Edited for use on the CryptoBeleggers Slack Group
 Easily transfer money between team members on your Slack channel.
 
 ## Basic features
